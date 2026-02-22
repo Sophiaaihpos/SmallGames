@@ -165,7 +165,7 @@ Object.assign(SnakeGame, {
         this.snake.forEach((s, i) => {
             if (i === 0) {
                 // Kopf mit Sprite und Rotation
-                const headSprite = PIXI.Sprite.from('/HTML5Game/assets/snakeHead.png');
+                const headSprite = PIXI.Sprite.from('/../../assets/snakeHead.png');
                 headSprite.x = s.x * 20 + 10;
                 headSprite.y = s.y * 20 + 10;
                 headSprite.width = 30;
@@ -190,7 +190,7 @@ Object.assign(SnakeGame, {
         });
 
         // Food mit Sprite
-        const foodSprite = PIXI.Sprite.from('/HTML5Game/assets/apple.png');
+        const foodSprite = PIXI.Sprite.from('/../../assets/apple.png');
         foodSprite.x = this.food.x * 20;
         foodSprite.y = this.food.y * 20;
         foodSprite.width = 19;

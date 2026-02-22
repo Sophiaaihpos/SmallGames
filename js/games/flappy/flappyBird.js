@@ -1,3 +1,6 @@
+import bird from '../../assets/bird.png';
+import back from '../../assets/flappyBackground.png';
+
 const FlappyBird = Object.create(BaseGame);
 Object.assign(FlappyBird, {
     gameType: 'flappyBird',
@@ -61,12 +64,12 @@ Object.assign(FlappyBird, {
 
         this.app.stage.removeChildren();
 
-        const background = PIXI.Sprite.from('/HTML5Game/assets/flappyBackground.png');
+        const background = PIXI.Sprite.from('../../../assets/flappyBackground.png');
         background.width = this.gameWidth;
         background.height = this.gameHeight;
         this.app.stage.addChild(background);
 
-        this.birdSprite = PIXI.Sprite.from('/HTML5Game/assets/bird.png');
+        this.birdSprite = PIXI.Sprite.from('../../../assets/bird.png');
         this.birdSprite.x = this.bird.x;
         this.birdSprite.y = this.bird.y;
         this.birdSprite.width = this.bird.width;
