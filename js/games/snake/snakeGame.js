@@ -117,6 +117,12 @@ Object.assign(SnakeGame, {
             GameManager.stopGame();
             GameManager.startGame('snake');
         };
+
+        document.getElementById('gameover-menu-btn').onclick = () => {
+            modal.style.display = 'none';
+            GameManager.stopGame();
+            GameManager.showMainMenu();
+        };
     },
 
     update() {
