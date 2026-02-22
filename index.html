@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 5 Game Collection</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+
+<body>
+    <div id="mainMenu" class="screen">
+        <h1>Game Collection</h1>
+        <p> This is a small collection of HTML5 / pixiJS games. <br> I created them in a rush to apply at SOFTGAMES</p>
+        <div class="game-buttons">
+            <button class="btn" onclick="GameManager.startGame('snake')">Snake</button>
+            <button class="btn" onclick="GameManager.startGame('click')">Click Game</button>
+            <button class="btn" onclick="GameManager.startGame('flappyBird')">Flappy Bird</button>
+        </div>
+    </div>
+    <div id="gameContainer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.8/dist/browser/pixi.min.js"></script>
+    <script src="js/gameManager.js"></script>
+    <script src="js/games/baseGame.js"></script>
+    <script src="js/games/snake/snakeGame.js"></script>
+    <script src="js/games/click/clickGame.js"></script>
+    <script src="js/games/flappy/flappyBird.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
