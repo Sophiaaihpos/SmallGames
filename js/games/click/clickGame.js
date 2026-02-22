@@ -23,7 +23,32 @@ Object.assign(ClickGame, {
         this.app = app;
         this.loadHighscore();
         this.ensureModals();
-        this.startGame();
+        this.showRulesScreen
+    },
+
+    showRulesScreen() {
+        const modal = document.getElementById('difficulty-modal');
+        if (!modal) return;
+
+        modal.style.display = 'flex';
+        modal.innerHTML = `
+        <h1>Color Match</h1>
+        <div style="color: white; font-size: 18px; max-width: 600px; text-align: left; margin-bottom: 40px;">
+            <p>🎨 Click on words that match their color</p>
+            <p>✅ If the word says "red" and is red, click it!</p>
+            <p>❌ If the word says "red" but is blue, don't click it</p>
+            <p>⏱️ You have 60 seconds to get as many correct as possible</p>
+            <p>⚠️ One mistake and it's game over!</p>
+        </div>
+        <div class="button-group">
+            <button class="btn" id="rules-continue-btn">Weiter</button>
+        </div>
+    `;
+
+        document.getElementById('rules-continue-btn').onclick = () => {
+            modal.style.display = 'none';
+            this.startGame();
+        };
     },
 
     startGame() {

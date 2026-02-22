@@ -2,7 +2,7 @@ const FlappyBird = Object.create(BaseGame);
 Object.assign(FlappyBird, {
     gameType: 'flappyBird',
     storageKey: 'flappyBirdHighscore',
-    
+
     bird: { x: 100, y: 200, width: 40, height: 40, velocityY: 0, gravity: 0.6, jumpForce: -12 },
     pipes: [],
     gameWidth: 800,
@@ -20,7 +20,32 @@ Object.assign(FlappyBird, {
         this.app = app;
         this.loadHighscore();
         this.ensureModals();
-        this.startGame();
+        this.showRulesScreen();
+    },
+
+    showRulesScreen() {
+        const modal = document.getElementById('difficulty-modal');
+        if (!modal) return;
+
+        modal.style.display = 'flex';
+        modal.innerHTML = `
+        <h1>Flappy Bird</h1>
+        <div style="color: white; font-size: 18px; max-width: 600px; text-align: left; margin-bottom: 40px;">
+            <p>🐦 Press SPACE to make the bird jump</p>
+            <p>📍 Fly through the gaps between the pipes</p>
+            <p>⚠️ Don't hit the pipes or the ground</p>
+            <p>⬆️ The game gets harder as your score increases</p>
+            <p>🎯 How high can you score?</p>
+        </div>
+        <div class="button-group">
+            <button class="btn" id="rules-continue-btn">Weiter</button>
+        </div>
+    `;
+
+        document.getElementById('rules-continue-btn').onclick = () => {
+            modal.style.display = 'none';
+            this.startGame();
+        };
     },
 
     startGame() {
