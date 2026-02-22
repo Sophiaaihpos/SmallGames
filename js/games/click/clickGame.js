@@ -23,7 +23,7 @@ Object.assign(ClickGame, {
         this.app = app;
         this.loadHighscore();
         this.ensureModals();
-        this.showRulesScreen
+        this.showRulesScreen();
     },
 
     showRulesScreen() {

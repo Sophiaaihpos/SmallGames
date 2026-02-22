@@ -45,7 +45,7 @@ const BaseGame = {
                     <button class="btn" id="gameover-menu-btn">Back to Menu</button>
                 </div>
             </div>
-            <div id="difficulty-modal"></div>
+                        <div id="difficulty-modal" ></div>
             `;
             document.body.insertAdjacentHTML('beforeend', html);
         }
@@ -83,7 +83,7 @@ const BaseGame = {
             document.getElementById('pause-menu-btn').onclick = () => {
                 modal.style.display = 'none';
                 GameManager.stopGame();
-                GameManager.showMenu();
+                GameManager.showMainMenu();
             };
         } else {
             modal.style.display = 'none';

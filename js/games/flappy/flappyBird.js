@@ -1,6 +1,3 @@
-import bird from '../../assets/bird.png';
-import back from '../../assets/flappyBackground.png';
-
 const FlappyBird = Object.create(BaseGame);
 Object.assign(FlappyBird, {
     gameType: 'flappyBird',
@@ -46,7 +43,7 @@ Object.assign(FlappyBird, {
     `;
 
         document.getElementById('rules-continue-btn').onclick = () => {
-            modal.style.display = 'none';
+            modal.style.display = 'none'; 
             this.startGame();
         };
     },
