@@ -165,7 +165,7 @@ Object.assign(SnakeGame, {
         this.snake.forEach((s, i) => {
             if (i === 0) {
                 // Kopf mit Sprite und Rotation
-                const headSprite = PIXI.Sprite.from('/assets/snakeHead.png');
+                const headSprite = PIXI.Sprite.from('.ad.png');
                 headSprite.x = s.x * 20 + 10;
                 headSprite.y = s.y * 20 + 10;
                 headSprite.width = 30;
