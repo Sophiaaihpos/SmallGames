@@ -61,7 +61,7 @@ Object.assign(FlappyBird, {
 
         this.app.stage.removeChildren();
 
-        const background = PIXI.Sprite.from('./assets/flappyBackground.png');
+        const background = PIXI.Sprite.from('/assets/flappyBackground.png');
         background.width = this.gameWidth;
         background.height = this.gameHeight;
         this.app.stage.addChild(background);
